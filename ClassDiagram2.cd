@@ -1,0 +1,195 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="EvolutionSimulator.AbtractPlant" Collapsed="true">
+    <Position X="4" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>Ak0AAAABAAAEgAAAABgACAFSAAAAAQAAAAACAAIBAJI=</HashCode>
+      <FileName>AbtractPlant.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="EvolutionSimulator.DNA" Collapsed="true">
+    <Position X="4" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAgAAAAAAAAAAAIAAAAQQAAAAAAAAAAAAAAAAABAADA=</HashCode>
+      <FileName>DNA.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EvolutionSimulator.gen" Collapsed="true">
+    <Position X="11.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAIAAAAAAAAABAAAAAAAAAAAAEBAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DNA.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EvolutionSimulator.DNAPlant" Collapsed="true">
+    <Position X="4" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DNAPlant.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EvolutionSimulator.EvolutionEntities" Collapsed="true">
+    <Position X="10" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAIAAAAAAAEAAAAAASAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EvolutionSimulator.S_DNA" Collapsed="true">
+    <Position X="10" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAEAgABAAAAYCAAQGAEAAAIEAgAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EvolutionSimulator.FieldMap" Collapsed="true">
+    <Position X="1" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAIAAAQAAAAAAABAAAAAAAAAABAAAAA=</HashCode>
+      <FileName>FieldMap.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="EvolutionSimulator.Ground" Collapsed="true">
+    <Position X="1" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAADAAAAAABAAYgQAAYIRAAAABgAwAAAAAQAIQCA=</HashCode>
+      <FileName>Ground.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EvolutionSimulator.MapMatrix" Collapsed="true">
+    <Position X="8.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABAAAAIAASAAAAAACgAgAQAABAAgAAACAAAIgAAYAA=</HashCode>
+      <FileName>MapMatrix.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EvolutionSimulator.Plant" Collapsed="true">
+    <Position X="4" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAACAACAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Plant.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EvolutionSimulator.BeingCreator" Collapsed="true">
+    <Position X="1" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>BeingCreator.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EvolutionSimulator.BeingFactory" Collapsed="true">
+    <Position X="1" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>BeingFactory.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EvolutionSimulator.Point" Collapsed="true">
+    <Position X="11.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAIAAQAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Point.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EvolutionSimulator.Program" Collapsed="true">
+    <Position X="13.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Program.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EvolutionSimulator.Ramdom" Collapsed="true">
+    <Position X="6.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEA=</HashCode>
+      <FileName>Ramdom.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EvolutionSimulator.Reproduction" Collapsed="true">
+    <Position X="8.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Reproduction.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EvolutionSimulator.save" Collapsed="true">
+    <Position X="11.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAgAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>save.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EvolutionSimulator.Simulator" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="6.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAIABBAACCAAgAAAAAAAAAAAAAAQAAAAAAAAAAAAAQ=</HashCode>
+      <FileName>Simulator.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="EvolutionSimulator.Tiempo" Collapsed="true">
+    <Position X="8.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Tiempo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EvolutionSimulator.GMap" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="13.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAhAAAAMEgDAAAAAgAAABACAAAAAgAAAAAAAAAAAAEA=</HashCode>
+      <FileName>UI\GMap.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="EvolutionSimulator.Screen" Collapsed="true">
+    <Position X="13.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAiAAAACADAAICAAAECAAAACgAAAAAAJQGAAQAAAcEA=</HashCode>
+      <FileName>UI\Screen.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EvolutionSimulator.DoubleClick_Arg" Collapsed="true">
+    <Position X="8.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABgAAAAAAA=</HashCode>
+      <FileName>UI\Screen.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EvolutionSimulator.UI.DNAProperties" Collapsed="true">
+    <Position X="6.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAACAAAACAAAAAAAAAAAAAAAAQAA=</HashCode>
+      <FileName>UI\DNAProperties.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EvolutionSimulator.UI.GroundProperties" Collapsed="true">
+    <Position X="6.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAgDAAAECAEAACAAUgAAAAAAAAAAABAAA=</HashCode>
+      <FileName>UI\GroundProperties.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EvolutionSimulator.UI.Menu" Collapsed="true">
+    <Position X="10" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACEAAAABACAAAAAAAACABAACAAAYAAAAAEAAAIAAAAA=</HashCode>
+      <FileName>UI\Menu.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="EvolutionSimulator.Imap" Collapsed="true">
+    <Position X="6.5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>UI\Imap.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Enum Name="EvolutionSimulator.kindstatus" Collapsed="true">
+    <Position X="6.5" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAIAAAAAAAAAAEAAAAABAAAAAAAAAAAACAAAAAA=</HashCode>
+      <FileName>AbtractPlant.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

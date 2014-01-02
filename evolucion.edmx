@@ -1,0 +1,189 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="dataModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+        <EntityContainer Name="dataModelStoreContainer">
+          <EntitySet Name="DGROUND" EntityType="dataModel.Store.DGROUND" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="DMAP" EntityType="dataModel.Store.DMAP" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="DNA" EntityType="dataModel.Store.DNA" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="DPLANT" EntityType="dataModel.Store.DPLANT" store:Type="Tables" Schema="dbo" />
+        </EntityContainer>
+        <EntityType Name="DGROUND">
+          <Key>
+            <PropertyRef Name="GROUND_ID" />
+          </Key>
+          <Property Name="GROUND_ID" Type="char" Nullable="false" MaxLength="32" />
+          <Property Name="PARENT" Type="char" MaxLength="32" />
+          <Property Name="X" Type="int" />
+          <Property Name="Y" Type="int" />
+          <Property Name="ABSORTION" Type="float" />
+          <Property Name="DAMAGE" Type="int" />
+          <Property Name="GROUNDTYPE" Type="char" MaxLength="32" />
+        </EntityType>
+        <EntityType Name="DMAP">
+          <Key>
+            <PropertyRef Name="MAP_ID" />
+          </Key>
+          <Property Name="MAP_ID" Type="char" Nullable="false" MaxLength="32" />
+          <Property Name="ROWS" Type="int" />
+          <Property Name="COLUMNS" Type="int" />
+          <Property Name="MAPNAME" Type="varchar" MaxLength="50" />
+          <Property Name="SAVEGAME" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="DNA">
+          <Key>
+            <PropertyRef Name="PARENT_ID" />
+            <PropertyRef Name="GEN" />
+          </Key>
+          <Property Name="PARENT_ID" Type="char" Nullable="false" MaxLength="32" />
+          <Property Name="GEN" Type="varchar" Nullable="false" MaxLength="32" />
+          <Property Name="VALOR" Type="float" />
+        </EntityType>
+        <EntityType Name="DPLANT">
+          <Key>
+            <PropertyRef Name="aliveID" />
+          </Key>
+          <Property Name="aliveID" Type="char" Nullable="false" MaxLength="32" />
+          <Property Name="PARENT_ID" Type="char" MaxLength="32" />
+          <Property Name="CURRENTLIFECYCLE" Type="int" />
+          <Property Name="GENERATION" Type="int" />
+          <Property Name="SIZE" Type="int" />
+          <Property Name="NEXTREPRODUCTIONCYCLE" Type="float" />
+          <Property Name="WATERDEPOSIT" Type="float" />
+          <Property Name="STATUS" Type="nchar" MaxLength="20" />
+        </EntityType>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="dataModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+        <EntityContainer Name="EvolutionEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="DNA" EntityType="dataModel.S_DNA" />
+          <EntitySet Name="DPLANT" EntityType="dataModel.DPLANT" />
+          <EntitySet Name="DGROUND" EntityType="dataModel.DGROUND" />
+          <EntitySet Name="DMAP" EntityType="dataModel.DMAP" />
+        </EntityContainer>
+        <EntityType Name="S_DNA">
+          <Key>
+            <PropertyRef Name="PARENT_ID" />
+            <PropertyRef Name="GEN" />
+          </Key>
+          <Property Name="PARENT_ID" Type="String" Nullable="false" MaxLength="32" Unicode="false" FixedLength="true" />
+          <Property Name="GEN" Type="String" Nullable="false" MaxLength="32" Unicode="false" FixedLength="false" />
+          <Property Name="VALOR" Type="Double" />
+        </EntityType>
+        <EntityType Name="DPLANT">
+          <Key>
+            <PropertyRef Name="aliveID" />
+          </Key>
+          <Property Type="String" Name="aliveID" Nullable="false" MaxLength="32" FixedLength="true" Unicode="false" />
+          <Property Type="String" Name="PARENT_ID" MaxLength="32" FixedLength="true" Unicode="false" />
+          <Property Type="Int32" Name="CURRENTLIFECYCLE" />
+          <Property Type="Int32" Name="GENERATION" />
+          <Property Type="Int32" Name="SIZE" />
+          <Property Type="Double" Name="NEXTREPRODUCTIONCYCLE" />
+          <Property Type="Double" Name="WATERDEPOSIT" />
+          <Property Type="String" Name="STATUS" MaxLength="20" FixedLength="true" Unicode="true" />
+        </EntityType>
+        <EntityType Name="DGROUND">
+          <Key>
+            <PropertyRef Name="GROUND_ID" />
+          </Key>
+          <Property Type="String" Name="GROUND_ID" Nullable="false" MaxLength="32" FixedLength="true" Unicode="false" />
+          <Property Type="String" Name="PARENT" MaxLength="32" FixedLength="true" Unicode="false" />
+          <Property Type="Int32" Name="X" />
+          <Property Type="Int32" Name="Y" />
+          <Property Type="Double" Name="ABSORTION" />
+          <Property Type="Int32" Name="DAMAGE" />
+          <Property Type="String" Name="GROUNDTYPE" MaxLength="32" FixedLength="true" Unicode="false" />
+        </EntityType>
+        <EntityType Name="DMAP">
+          <Key>
+            <PropertyRef Name="MAP_ID" />
+          </Key>
+          <Property Type="String" Name="MAP_ID" Nullable="false" MaxLength="32" FixedLength="true" Unicode="false" />
+          <Property Type="Int32" Name="ROWS" />
+          <Property Type="Int32" Name="COLUMNS" />
+          <Property Type="String" Name="MAPNAME" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="SAVEGAME" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="dataModelStoreContainer" CdmEntityContainer="EvolutionEntities">
+          <EntitySetMapping Name="DNA"><EntityTypeMapping TypeName="dataModel.S_DNA"><MappingFragment StoreEntitySet="DNA">
+            <ScalarProperty Name="PARENT_ID" ColumnName="PARENT_ID" />
+            <ScalarProperty Name="GEN" ColumnName="GEN" />
+            <ScalarProperty Name="VALOR" ColumnName="VALOR" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="DPLANT">
+            <EntityTypeMapping TypeName="dataModel.DPLANT">
+              <MappingFragment StoreEntitySet="DPLANT">
+                <ScalarProperty Name="STATUS" ColumnName="STATUS" />
+                <ScalarProperty Name="WATERDEPOSIT" ColumnName="WATERDEPOSIT" />
+                <ScalarProperty Name="NEXTREPRODUCTIONCYCLE" ColumnName="NEXTREPRODUCTIONCYCLE" />
+                <ScalarProperty Name="SIZE" ColumnName="SIZE" />
+                <ScalarProperty Name="GENERATION" ColumnName="GENERATION" />
+                <ScalarProperty Name="CURRENTLIFECYCLE" ColumnName="CURRENTLIFECYCLE" />
+                <ScalarProperty Name="PARENT_ID" ColumnName="PARENT_ID" />
+                <ScalarProperty Name="aliveID" ColumnName="aliveID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="DGROUND">
+            <EntityTypeMapping TypeName="dataModel.DGROUND">
+              <MappingFragment StoreEntitySet="DGROUND">
+                <ScalarProperty Name="GROUNDTYPE" ColumnName="GROUNDTYPE" />
+                <ScalarProperty Name="DAMAGE" ColumnName="DAMAGE" />
+                <ScalarProperty Name="ABSORTION" ColumnName="ABSORTION" />
+                <ScalarProperty Name="Y" ColumnName="Y" />
+                <ScalarProperty Name="X" ColumnName="X" />
+                <ScalarProperty Name="PARENT" ColumnName="PARENT" />
+                <ScalarProperty Name="GROUND_ID" ColumnName="GROUND_ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="DMAP">
+            <EntityTypeMapping TypeName="dataModel.DMAP">
+              <MappingFragment StoreEntitySet="DMAP">
+                <ScalarProperty Name="SAVEGAME" ColumnName="SAVEGAME" />
+                <ScalarProperty Name="MAPNAME" ColumnName="MAPNAME" />
+                <ScalarProperty Name="COLUMNS" ColumnName="COLUMNS" />
+                <ScalarProperty Name="ROWS" ColumnName="ROWS" />
+                <ScalarProperty Name="MAP_ID" ColumnName="MAP_ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="False" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams>
+      <Diagram Name="evolucion">
+        <EntityTypeShape EntityType="dataModel.S_DNA" Width="1.5" PointX="0.75" PointY="0.75" Height="1.59568359375" IsExpanded="true" />
+        <EntityTypeShape EntityType="dataModel.DPLANT" Width="1.5" PointX="3.375" PointY="0.75" Height="2.5571907552083326" />
+        <EntityTypeShape EntityType="dataModel.DGROUND" Width="1.5" PointX="0.75" PointY="3.75" Height="2.3648893229166656" />
+        <EntityTypeShape EntityType="dataModel.DMAP" Width="1.5" PointX="3.375" PointY="4.75" Height="1.9802864583333335" />
+      </Diagram>
+    </Diagrams>
+  </Designer>
+</edmx:Edmx>

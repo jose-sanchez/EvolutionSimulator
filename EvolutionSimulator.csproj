@@ -1,0 +1,212 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{F508081D-BA7E-46D1-8063-B808C5F0B4EA}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>EvolutionSimulator</RootNamespace>
+    <AssemblyName>EvolutionSimulator</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Runtime.Serialization.Formatters.Soap" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AbtractPlant.cs" />
+    <Compile Include="DNA.cs" />
+    <Compile Include="DNAPlant.cs" />
+    <Compile Include="evolucion.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>evolucion.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="FieldMap.cs" />
+    <Compile Include="IAlive.cs" />
+    <Compile Include="IFieldMap.cs" />
+    <Compile Include="IPlant.cs" />
+    <Compile Include="Ramdom.cs" />
+    <Compile Include="save.cs" />
+    <Compile Include="UI\DNAProperties.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\DNAProperties.Designer.cs">
+      <DependentUpon>DNAProperties.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\GMap.cs" />
+    <Compile Include="Ground.cs" />
+    <Compile Include="MapMatrix.cs" />
+    <Compile Include="Plant.cs" />
+    <Compile Include="BeingCreator.cs" />
+    <Compile Include="BeingFactory.cs" />
+    <Compile Include="Point.cs" />
+    <Compile Include="UI\GroundProperties.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\GroundProperties.Designer.cs">
+      <DependentUpon>GroundProperties.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Imap.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Reproduction.cs" />
+    <Compile Include="UI\LoadGame.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\LoadGame.Designer.cs">
+      <DependentUpon>LoadGame.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Menu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Menu.Designer.cs">
+      <DependentUpon>Menu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\SaveGame.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\SaveGame.Designer.cs">
+      <DependentUpon>SaveGame.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Screen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Screen.Designer.cs">
+      <DependentUpon>Screen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Simulator.cs" />
+    <Compile Include="Tiempo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ClassDiagram1.cd" />
+    <EntityDeploy Include="evolucion.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>evolucion.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="ClassDiagram2.cd" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="UI\DNAProperties.resx">
+      <DependentUpon>DNAProperties.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\GroundProperties.resx">
+      <DependentUpon>GroundProperties.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\LoadGame.resx">
+      <DependentUpon>LoadGame.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Menu.resx">
+      <DependentUpon>Menu.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\SaveGame.resx">
+      <DependentUpon>SaveGame.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Screen.resx">
+      <DependentUpon>Screen.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="data.mdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="data_log.ldf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <DependentUpon>data.mdf</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0,Profile=Client">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 Client Profile %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Sql.Server.Express.10.0">
+      <Visible>False</Visible>
+      <ProductName>SQL Server 2008 Express</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.4.5">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 4.5</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
