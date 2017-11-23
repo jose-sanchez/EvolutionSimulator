@@ -5,6 +5,7 @@ using System.Text;
 using System.Drawing;
 using System.Windows.Forms;
 using Microsoft.Win32;
+using System.IO;
 
 namespace EvolutionSimulator
 {
@@ -41,7 +42,8 @@ namespace EvolutionSimulator
                 imagepath = rk_imagepath.GetValue("imagePath").ToString();
             }
             else {
-                imagepath = "C:\\Users\\evolution\\images\\ground";
+                imagepath = Path.Combine(Environment.CurrentDirectory, @"UI\Images\ground");
+
             }
         }
 

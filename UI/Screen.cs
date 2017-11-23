@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using EvolutionSimulator.UI;
+using System.IO;
 
 namespace EvolutionSimulator
 {
@@ -48,7 +49,7 @@ namespace EvolutionSimulator
             InitializeComponent();
      
             
-            _gmap = new GMap(30, 30,"C:\\evolution\\map1.txt", this.Location.X, this.Location.Y,20,20);
+            _gmap = new GMap(30, 30, Path.Combine(Environment.CurrentDirectory, @"UI\Maps\map1.txt"), this.Location.X, this.Location.Y,20,20);
             mapimage= _gmap.PaintMap(this,_surface);
             g = this.CreateGraphics();
             g = Graphics.FromImage(mapimage);

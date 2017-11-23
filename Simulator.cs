@@ -5,6 +5,7 @@ using System.Text;
 using System.Timers;
 using EvolutionSimulator.UI;
 using System.Windows.Forms;
+using System.IO;
 
 namespace EvolutionSimulator
 {
@@ -19,7 +20,7 @@ namespace EvolutionSimulator
         public Simulator()
         {     
             Screen.EventTriggered += Screen_MouseDoubleClick;
-            string mapname = "C:\\temp\\map1.txt";
+            string mapname = Path.Combine(Environment.CurrentDirectory, @"UI\Maps\map1.txt");
             mMatrix = new MapMatrix(13, 13, mapname);
             mMatrix.addPlantToGround(10, 10, new DNAPlant("12345678123456781234567812345678"));
             mMatrix.Mapname = mapname;
