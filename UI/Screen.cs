@@ -47,9 +47,10 @@ namespace EvolutionSimulator
         public Screen()
         {
             InitializeComponent();
-     
-            
-            _gmap = new GMap(30, 30, Path.Combine(Environment.CurrentDirectory, @"UI\Maps\map1.txt"), this.Location.X, this.Location.Y,20,20);
+
+            int mapStartXCoordinate = 300;
+            int mapStartYCoordinate = 100;
+            _gmap = new GMap(30, 30, Path.Combine(Environment.CurrentDirectory, @"UI\Maps\map1.txt"), mapStartXCoordinate, mapStartYCoordinate, 20,20);
             mapimage= _gmap.PaintMap(this,_surface);
             g = this.CreateGraphics();
             g = Graphics.FromImage(mapimage);
