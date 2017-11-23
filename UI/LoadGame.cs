@@ -15,7 +15,7 @@ namespace EvolutionSimulator.UI
         public LoadGame(string LoadedGame)
         {
             InitializeComponent();
-            listBox1.DataSource = save.ListGames();
+            listBox1.DataSource = Save.ListGames();
             this.LoadedGame = LoadedGame;
         }
 

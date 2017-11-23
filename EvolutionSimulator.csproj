@@ -76,13 +76,14 @@
     <Compile Include="IAlive.cs" />
     <Compile Include="IFieldMap.cs" />
     <Compile Include="IPlant.cs" />
+    <Compile Include="Point.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <Compile Include="Ramdom.cs" />
-    <Compile Include="save.cs" />
+    <Compile Include="Save.cs" />
     <Compile Include="UI\DNAProperties.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -95,7 +96,6 @@
     <Compile Include="Plant.cs" />
     <Compile Include="BeingCreator.cs" />
     <Compile Include="BeingFactory.cs" />
-    <Compile Include="Point.cs" />
     <Compile Include="UI\GroundProperties.cs">
       <SubType>Form</SubType>
     </Compile>

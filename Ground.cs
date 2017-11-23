@@ -262,7 +262,7 @@ namespace EvolutionSimulator
             }
         public void SaveToDataBase()
         {
-            save.save_ground(this);
+            Save.save_ground(this);
             foreach (Plant plant in ListPlant)
             {
                 plant.SavetoDataBase();
@@ -275,8 +275,8 @@ namespace EvolutionSimulator
         public void LoadFromDataBase()
         {
 
-            _ListPlant = save.load_plants(this, kindstatus.Growup);
-            _ListSeeds = save.load_plants(this, kindstatus.Seed);
+            _ListPlant = Save.load_plants(this, kindstatus.Growup);
+            _ListSeeds = Save.load_plants(this, kindstatus.Seed);
             foreach (Plant plant in _ListPlant)
             {
 

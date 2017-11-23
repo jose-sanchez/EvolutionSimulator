@@ -66,7 +66,7 @@ namespace EvolutionSimulator
         public void saveDNA(){
           
             foreach (gen _gen in _dnachain){
-                save.save_gen(_gen, Parent_ID);
+                Save.save_gen(_gen, Parent_ID);
             }
         }
         

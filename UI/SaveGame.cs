@@ -23,7 +23,7 @@ namespace EvolutionSimulator.UI
             
             if (textBox1.Text != "")
             {
-                if (!save.ExistMap(textBox1.Text))
+                if (!Save.ExistMap(textBox1.Text))
                 {
                     mustsave = true;
                     savename = textBox1.Text;

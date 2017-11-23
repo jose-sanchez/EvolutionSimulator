@@ -6,7 +6,7 @@ using System.Data.Objects;
 using System.Data.Objects.DataClasses;
 namespace EvolutionSimulator
 {
-    public static class save
+    public static class Save
     {
         static private EvolutionEntities Context = new EvolutionEntities() ;
 

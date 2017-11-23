@@ -34,12 +34,12 @@ namespace EvolutionSimulator
 
         public void SavetoDataBase()
         {
-            save.save_plant(this);
+            Save.save_plant(this);
             dna.saveDNA();
         }
         public void LoadFromDataBase()
         {
-            _dna = save.load_dna(AliveID, Generation);
+            _dna = Save.load_dna(AliveID, Generation);
         }
     }
 

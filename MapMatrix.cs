@@ -154,7 +154,7 @@ namespace EvolutionSimulator
         public void SavetoDataBase()
         {
 
-            save.save_map(this);
+            Save.save_map(this);
             foreach (Ground ground in _mapM)
             {
 
@@ -164,7 +164,7 @@ namespace EvolutionSimulator
         public void LoadFromDataBase()
         {
 
-            _mapM= save.load_ground(this);
+            _mapM= Save.load_ground(this);
             foreach (Ground ground in _mapM)
             {
                
