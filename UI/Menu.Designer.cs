@@ -36,9 +36,9 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(46, 22);
+            this.button1.Location = new System.Drawing.Point(49, 27);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.Size = new System.Drawing.Size(201, 136);
             this.button1.TabIndex = 0;
             this.button1.Text = "Start";
             this.button1.UseVisualStyleBackColor = true;
@@ -46,7 +46,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(148, 22);
+            this.button2.Location = new System.Drawing.Point(187, 239);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 23);
             this.button2.TabIndex = 1;
@@ -56,16 +56,17 @@
             // 
             // listView1
             // 
-            this.listView1.Location = new System.Drawing.Point(46, 84);
+            this.listView1.Location = new System.Drawing.Point(23, 101);
             this.listView1.Name = "listView1";
             this.listView1.Size = new System.Drawing.Size(189, 149);
             this.listView1.TabIndex = 2;
             this.listView1.UseCompatibleStateImageBehavior = false;
+            this.listView1.Visible = false;
             this.listView1.SelectedIndexChanged += new System.EventHandler(this.listView1_SelectedIndexChanged);
             // 
             // btLoad
             // 
-            this.btLoad.Location = new System.Drawing.Point(93, 55);
+            this.btLoad.Location = new System.Drawing.Point(70, 239);
             this.btLoad.Name = "btLoad";
             this.btLoad.Size = new System.Drawing.Size(75, 23);
             this.btLoad.TabIndex = 3;
