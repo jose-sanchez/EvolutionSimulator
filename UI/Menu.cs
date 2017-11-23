@@ -69,7 +69,7 @@ namespace EvolutionSimulator.UI
         {
             try
             {
-                MapMatrix m = new MapMatrix(4,4,"C:\\temp\\map.txt");
+                MapMatrix m = new MapMatrix(4,4,"C:\\temp\\map.txt",null);
                 Console.Write("Element in 0,0");
                 Console.Write(m.mapM.Single(S => S.coordn.positionx == 0 & S.coordn.positiony == 0).groundtype);
                 Console.Write("Element in 0,1");

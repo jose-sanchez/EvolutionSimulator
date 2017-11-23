@@ -133,10 +133,10 @@ namespace EvolutionSimulator
             Context.AddToDMAP(map);
             Console.WriteLine(Context.SaveChanges());         
         }
-        public static MapMatrix load_map(string Gamename)
+        public static MapMatrix load_map(string Gamename,Screen gui)
         {          
             DMAP map = Context.DMAP.Single(S => S.SAVEGAME == Gamename);
-            MapMatrix MapMatrix = new MapMatrix(Gamename, map.MAP_ID);
+            MapMatrix MapMatrix = new MapMatrix(Gamename, map.MAP_ID, gui);
             MapMatrix.Mapname = map.MAPNAME;
             MapMatrix.X = (int)map.COLUMNS;
             MapMatrix.Y = (int)map.ROWS;

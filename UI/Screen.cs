@@ -18,8 +18,8 @@ namespace EvolutionSimulator
         Graphics _surface;
         Bitmap mapimage ;
         bool _IsCycleStop = true;
-        int X;
-        int Y;
+        public int mapStartXCoordinate { get; set;}
+        public int mapStartYCoordinate { get; set; }
         public bool IsCycleStop
         {
             get { return _IsCycleStop; }
@@ -27,29 +27,17 @@ namespace EvolutionSimulator
         }
         public bool mustSaveGame { get; set; }
         public string SaveGameName { get; set; }
-        private static Screen InstanceScreen;
         delegate void PaintCallback(Point point, string groundtype, int nplants);
         delegate void RefreshCallback();
         static readonly object locker = new object();
-        public static Screen Instance
 
-        {
-            get
-            {
-                if (InstanceScreen == null)
-                {
-                    InstanceScreen = new Screen();
-                }
-                return InstanceScreen;
-            }
-        }
         public static event EventHandler<DoubleClick_Arg> EventTriggered; 
-        public Screen()
+        public Screen(int mapStartXCoordinate, int mapStartYCoordinate)
         {
             InitializeComponent();
 
-            int mapStartXCoordinate = 300;
-            int mapStartYCoordinate = 100;
+            this.mapStartXCoordinate = mapStartXCoordinate;
+            this.mapStartYCoordinate = mapStartYCoordinate;
             _gmap = new GMap(30, 30, Path.Combine(Environment.CurrentDirectory, @"UI\Maps\map1.txt"), mapStartXCoordinate, mapStartYCoordinate, 20,20);
             mapimage= _gmap.PaintMap(this,_surface);
             g = this.CreateGraphics();

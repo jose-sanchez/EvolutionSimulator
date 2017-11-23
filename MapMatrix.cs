@@ -68,22 +68,22 @@ namespace EvolutionSimulator
         {
         }
 
-        public MapMatrix(string savegame,string mapID)
+        public MapMatrix(string savegame,string mapID, Screen instance)
         //Load from database. It will retrieve the information from the database 
         {
-            screen = Screen.Instance;
+            screen = instance;
             _savegame = savegame;
             this.mapID = mapID;
             RePaint();
         }
-        public MapMatrix(int x, int y, string mapname)
+        public MapMatrix(int x, int y, string mapname, Screen instance)
         //Initialize the matrix reading the type of ground from the file mapname and creating the ground elements
         {
             _x = x;
             _y = y;
             Ramdom gui = new Ramdom();
             mapID = gui.RandomString(32);
-            screen = Screen.Instance;
+            screen = instance;
             _mapname = mapname;
             try
             {
