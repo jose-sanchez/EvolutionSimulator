@@ -52,6 +52,7 @@
             this.button2.TabIndex = 1;
             this.button2.Text = "Test Mode";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Visible = false;
             // 
             // listView1
             // 
@@ -70,6 +71,7 @@
             this.btLoad.TabIndex = 3;
             this.btLoad.Text = "Load Game";
             this.btLoad.UseVisualStyleBackColor = true;
+            this.btLoad.Visible = false;
             this.btLoad.Click += new System.EventHandler(this.btLoad_Click);
             // 
             // Menu
