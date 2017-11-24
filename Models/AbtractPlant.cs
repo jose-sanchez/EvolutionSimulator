@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace EvolutionSimulator
+namespace EvolutionSimulator.Models
 {
     public enum kindstatus { Seed, Growup, Reproduction, Dead };
     public abstract class AbtractPlant:IPlant

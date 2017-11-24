@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using EvolutionSimulator.Models;
 
 namespace EvolutionSimulator.UI
 {
@@ -51,7 +52,7 @@ namespace EvolutionSimulator.UI
             try
             {
                 MapMatrix m = new MapMatrix();
-                Ground g = new Ground(m, "W",new Point(0,0));
+                Ground g = new Ground(m, "W",new MapPoint(0,0));
               
             }
             catch (Exception e)

@@ -1,15 +1,15 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
   <!-- EF Runtime content -->
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-    <Schema Namespace="dataModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+    <Schema Namespace="dataModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityContainer Name="dataModelStoreContainer">
-          <EntitySet Name="DGROUND" EntityType="dataModel.Store.DGROUND" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="DMAP" EntityType="dataModel.Store.DMAP" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="DNA" EntityType="dataModel.Store.DNA" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="DPLANT" EntityType="dataModel.Store.DPLANT" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="DGROUND" EntityType="dataModel.Store.DGROUND" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+          <EntitySet Name="DMAP" EntityType="dataModel.Store.DMAP" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+          <EntitySet Name="DNA" EntityType="dataModel.Store.DNA" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+          <EntitySet Name="DPLANT" EntityType="dataModel.Store.DPLANT" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
         </EntityContainer>
         <EntityType Name="DGROUND">
           <Key>
@@ -58,8 +58,8 @@
       </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
-      <Schema Namespace="dataModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
-        <EntityContainer Name="EvolutionEntities" annotation:LazyLoadingEnabled="true">
+      <Schema Namespace="dataModel" Alias="Self" xmlns="http://schemas.microsoft.com/ado/2009/11/edm" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation">
+        <EntityContainer Name="EvolutionEntities" annotation:LazyLoadingEnabled="true" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation">
           <EntitySet Name="DNA" EntityType="dataModel.S_DNA" />
           <EntitySet Name="DPLANT" EntityType="dataModel.DPLANT" />
           <EntitySet Name="DGROUND" EntityType="dataModel.DGROUND" />
@@ -106,14 +106,14 @@
           <Property Type="String" Name="MAP_ID" Nullable="false" MaxLength="32" FixedLength="true" Unicode="false" />
           <Property Type="Int32" Name="ROWS" />
           <Property Type="Int32" Name="COLUMNS" />
-          <Property Type="String" Name="MAPNAME" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="MAPNAME" MaxLength="200" FixedLength="false" Unicode="false" />
           <Property Type="String" Name="SAVEGAME" MaxLength="50" FixedLength="false" Unicode="false" />
         </EntityType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
     <edmx:Mappings>
-      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
         <EntityContainerMapping StorageEntityContainer="dataModelStoreContainer" CdmEntityContainer="EvolutionEntities">
           <EntitySetMapping Name="DNA"><EntityTypeMapping TypeName="dataModel.S_DNA"><MappingFragment StoreEntitySet="DNA">
             <ScalarProperty Name="PARENT_ID" ColumnName="PARENT_ID" />
@@ -163,27 +163,27 @@
     </edmx:Mappings>
   </edmx:Runtime>
   <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
-  <Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
-    <Connection>
-      <DesignerInfoPropertySet>
-        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
-      </DesignerInfoPropertySet>
-    </Connection>
-    <Options>
-      <DesignerInfoPropertySet>
-        <DesignerProperty Name="ValidateOnBuild" Value="true" />
-        <DesignerProperty Name="EnablePluralization" Value="False" />
-        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
-      </DesignerInfoPropertySet>
-    </Options>
+  <edmx:Designer>
+    <edmx:Connection>
+      <edmx:DesignerInfoPropertySet>
+        <edmx:DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </edmx:DesignerInfoPropertySet>
+    </edmx:Connection>
+    <edmx:Options>
+      <edmx:DesignerInfoPropertySet>
+        <edmx:DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <edmx:DesignerProperty Name="EnablePluralization" Value="False" />
+        <edmx:DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+      </edmx:DesignerInfoPropertySet>
+    </edmx:Options>
     <!-- Diagram content (shape and connector positions) -->
-    <Diagrams>
-      <Diagram Name="evolucion">
-        <EntityTypeShape EntityType="dataModel.S_DNA" Width="1.5" PointX="0.75" PointY="0.75" Height="1.59568359375" IsExpanded="true" />
-        <EntityTypeShape EntityType="dataModel.DPLANT" Width="1.5" PointX="3.375" PointY="0.75" Height="2.5571907552083326" />
-        <EntityTypeShape EntityType="dataModel.DGROUND" Width="1.5" PointX="0.75" PointY="3.75" Height="2.3648893229166656" />
-        <EntityTypeShape EntityType="dataModel.DMAP" Width="1.5" PointX="3.375" PointY="4.75" Height="1.9802864583333335" />
-      </Diagram>
-    </Diagrams>
-  </Designer>
+    <edmx:Diagrams>
+      <edmx:Diagram Name="evolucion">
+        <edmx:EntityTypeShape EntityType="dataModel.S_DNA" Width="1.5" PointX="0.75" PointY="0.75" Height="1.59568359375" IsExpanded="true" />
+        <edmx:EntityTypeShape EntityType="dataModel.DPLANT" Width="1.5" PointX="3.375" PointY="0.75" Height="2.5571907552083326" />
+        <edmx:EntityTypeShape EntityType="dataModel.DGROUND" Width="1.5" PointX="0.75" PointY="3.75" Height="2.3648893229166656" />
+        <edmx:EntityTypeShape EntityType="dataModel.DMAP" Width="1.5" PointX="3.375" PointY="4.75" Height="1.9802864583333335" />
+      </edmx:Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
 </edmx:Edmx>

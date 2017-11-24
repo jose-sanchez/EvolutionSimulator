@@ -5,7 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace EvolutionSimulator
+namespace EvolutionSimulator.Models
 {
     public class Ground:FieldMap
     {
@@ -43,7 +43,7 @@ namespace EvolutionSimulator
             get { return _plantsNumber; }
         }
 
-        public Ground(MapMatrix parent,string groundtype, Point coord):base()
+        public Ground(MapMatrix parent,string groundtype, MapPoint coord):base()
         {
             Ramdom gui = new Ramdom();
             groundID = gui.RandomString(32);

@@ -3,14 +3,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace EvolutionSimulator
+namespace EvolutionSimulator.Models
 {
-    public class Point
+    public class MapPoint
     {
         public int _x = 0;
         public int _y = 0;
 
-        public Point(int x, int y)
+        public MapPoint(int x, int y)
         {
             this._x = x;
             this._y = y;

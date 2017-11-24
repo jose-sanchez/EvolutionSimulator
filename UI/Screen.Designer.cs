@@ -85,9 +85,9 @@ namespace EvolutionSimulator
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(244, 405);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(378, 13);
+            this.label1.Size = new System.Drawing.Size(372, 13);
             this.label1.TabIndex = 33;
-            this.label1.Text = "Click in the map squares to obatain further information about the growing plants";
+            this.label1.Text = "Click in the map squares to obtain further information about the growing plants";
             // 
             // pictureBox4
             // 

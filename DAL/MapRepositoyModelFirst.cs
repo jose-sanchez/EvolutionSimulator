@@ -1,4 +1,5 @@
-﻿using System;
+﻿using EvolutionSimulator.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -111,7 +112,7 @@ namespace EvolutionSimulator.DAL
             foreach (DGROUND item in query)
             {
                 Ground newGround =
-                    new Ground(parent, item.GROUNDTYPE, new Point((int)item.X, (int)item.Y));
+                    new Ground(parent, item.GROUNDTYPE, new MapPoint((int)item.X, (int)item.Y));
                 newGround.GroundID = item.GROUND_ID;
                 newGround.Damage = (int) item.DAMAGE;
                 newGround.Absortion = (double)item.ABSORTION;

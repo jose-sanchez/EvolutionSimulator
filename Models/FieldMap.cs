@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace EvolutionSimulator
+namespace EvolutionSimulator.Models
 {
     public abstract class FieldMap:IFieldMap
     {
@@ -16,8 +16,8 @@ namespace EvolutionSimulator
             
          
         }
-        protected Point coordenate;
-        public Point coordn
+        protected MapPoint coordenate;
+        public MapPoint coordn
         {
             get { return coordenate; }
         }

@@ -72,20 +72,20 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AbtractPlant.cs" />
+    <Compile Include="Models\AbtractPlant.cs" />
     <Compile Include="DAL\MapRepositoryCodeFirst.cs" />
-    <Compile Include="DNA.cs" />
-    <Compile Include="DNAPlant.cs" />
+    <Compile Include="Models\DNA.cs" />
+    <Compile Include="Models\DNAPlant.cs" />
     <Compile Include="DAL\evolucion.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>evolucion.edmx</DependentUpon>
     </Compile>
-    <Compile Include="FieldMap.cs" />
-    <Compile Include="IAlive.cs" />
-    <Compile Include="IFieldMap.cs" />
-    <Compile Include="IPlant.cs" />
-    <Compile Include="Point.cs" />
+    <Compile Include="Models\FieldMap.cs" />
+    <Compile Include="Models\IAlive.cs" />
+    <Compile Include="Models\IFieldMap.cs" />
+    <Compile Include="Models\IPlant.cs" />
+    <Compile Include="Models\MapPoint.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -100,9 +100,9 @@
       <DependentUpon>DNAProperties.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\GMap.cs" />
-    <Compile Include="Ground.cs" />
-    <Compile Include="MapMatrix.cs" />
-    <Compile Include="Plant.cs" />
+    <Compile Include="Models\Ground.cs" />
+    <Compile Include="Models\MapMatrix.cs" />
+    <Compile Include="Models\Plant.cs" />
     <Compile Include="Services\BeingCreator.cs" />
     <Compile Include="Services\BeingFactory.cs" />
     <Compile Include="UI\GroundProperties.cs">
@@ -146,12 +146,12 @@
     <None Include="App.config">
       <SubType>Designer</SubType>
     </None>
-    <None Include="ClassDiagram1.cd" />
+    <None Include="DAL\ClassDiagram1.cd" />
     <EntityDeploy Include="DAL\evolucion.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>evolucion.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <None Include="ClassDiagram2.cd" />
+    <None Include="DAL\ClassDiagram2.cd" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
@@ -468,9 +468,7 @@
       <Install>true</Install>
     </BootstrapperPackage>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Models\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

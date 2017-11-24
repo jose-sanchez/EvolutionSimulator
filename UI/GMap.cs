@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Windows.Forms;
 using Microsoft.Win32;
 using System.IO;
+using EvolutionSimulator.Models;
 
 namespace EvolutionSimulator
 {
@@ -80,7 +81,7 @@ namespace EvolutionSimulator
             }
             return mapimage;
         }
-        public void paint(Graphics grap, Point point,string groundtype, int nplants)
+        public void paint(Graphics grap, MapPoint point,string groundtype, int nplants)
         {
             Image MyImage;
             int plants = (nplants / 5) + 1;
@@ -89,7 +90,7 @@ namespace EvolutionSimulator
             grap.DrawImage(MyImage, _pixelX + (point.positionx * _imagesizeX), _pixelY + (point.positiony * _imagesizeY));
             
         }
-        public Bitmap paint(Bitmap mapImage, Point point,string groundtype, int nplants)
+        public Bitmap paint(Bitmap mapImage, MapPoint point,string groundtype, int nplants)
         {
             Graphics grap;
             Image MyImage;

@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using EvolutionSimulator.UI;
 using EvolutionSimulator.DAL;
+using EvolutionSimulator.Models;
 
 namespace EvolutionSimulator
 {

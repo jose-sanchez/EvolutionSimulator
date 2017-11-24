@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace EvolutionSimulator
+namespace EvolutionSimulator.Models
 {
     class DNAPlant:DNA{
     

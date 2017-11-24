@@ -8,16 +8,19 @@
 //------------------------------------------------------------------------------
 
 using System;
-using System.Data.Entity.Core.EntityClient;
-using System.Data.Entity.Core.Objects;
-using System.Data.Entity.Core.Objects.DataClasses;
+using System.ComponentModel;
+using System.Data.EntityClient;
+using System.Data.Objects;
+using System.Data.Objects.DataClasses;
+using System.Linq;
 using System.Runtime.Serialization;
+using System.Xml.Serialization;
 
 [assembly: EdmSchemaAttribute()]
 namespace EvolutionSimulator.DAL
 {
     #region Contexts
-
+    
     /// <summary>
     /// No Metadata Documentation available.
     /// </summary>
@@ -193,7 +196,7 @@ namespace EvolutionSimulator.DAL
 
         #endregion
 
-        #region Primitive Properties
+        #region Simple Properties
     
         /// <summary>
         /// No Metadata Documentation available.
@@ -212,7 +215,7 @@ namespace EvolutionSimulator.DAL
                 {
                     OnGROUND_IDChanging(value);
                     ReportPropertyChanging("GROUND_ID");
-                    _GROUND_ID = StructuralObject.SetValidValue(value, false);
+                    _GROUND_ID = StructuralObject.SetValidValue(value, false, "GROUND_ID");
                     ReportPropertyChanged("GROUND_ID");
                     OnGROUND_IDChanged();
                 }
@@ -237,7 +240,7 @@ namespace EvolutionSimulator.DAL
             {
                 OnPARENTChanging(value);
                 ReportPropertyChanging("PARENT");
-                _PARENT = StructuralObject.SetValidValue(value, true);
+                _PARENT = StructuralObject.SetValidValue(value, true, "PARENT");
                 ReportPropertyChanged("PARENT");
                 OnPARENTChanged();
             }
@@ -261,7 +264,7 @@ namespace EvolutionSimulator.DAL
             {
                 OnXChanging(value);
                 ReportPropertyChanging("X");
-                _X = StructuralObject.SetValidValue(value);
+                _X = StructuralObject.SetValidValue(value, "X");
                 ReportPropertyChanged("X");
                 OnXChanged();
             }
@@ -285,7 +288,7 @@ namespace EvolutionSimulator.DAL
             {
                 OnYChanging(value);
                 ReportPropertyChanging("Y");
-                _Y = StructuralObject.SetValidValue(value);
+                _Y = StructuralObject.SetValidValue(value, "Y");
                 ReportPropertyChanged("Y");
                 OnYChanged();
             }
@@ -309,7 +312,7 @@ namespace EvolutionSimulator.DAL
             {
                 OnABSORTIONChanging(value);
                 ReportPropertyChanging("ABSORTION");
-                _ABSORTION = StructuralObject.SetValidValue(value);
+                _ABSORTION = StructuralObject.SetValidValue(value, "ABSORTION");
                 ReportPropertyChanged("ABSORTION");
                 OnABSORTIONChanged();
             }
@@ -333,7 +336,7 @@ namespace EvolutionSimulator.DAL
             {
                 OnDAMAGEChanging(value);
                 ReportPropertyChanging("DAMAGE");
-                _DAMAGE = StructuralObject.SetValidValue(value);
+                _DAMAGE = StructuralObject.SetValidValue(value, "DAMAGE");
                 ReportPropertyChanged("DAMAGE");
                 OnDAMAGEChanged();
             }
@@ -357,7 +360,7 @@ namespace EvolutionSimulator.DAL
             {
                 OnGROUNDTYPEChanging(value);
                 ReportPropertyChanging("GROUNDTYPE");
-                _GROUNDTYPE = StructuralObject.SetValidValue(value, true);
+                _GROUNDTYPE = StructuralObject.SetValidValue(value, true, "GROUNDTYPE");
                 ReportPropertyChanged("GROUNDTYPE");
                 OnGROUNDTYPEChanged();
             }
@@ -368,7 +371,6 @@ namespace EvolutionSimulator.DAL
 
         #endregion
 
-    
     }
     
     /// <summary>
@@ -394,7 +396,7 @@ namespace EvolutionSimulator.DAL
 
         #endregion
 
-        #region Primitive Properties
+        #region Simple Properties
     
         /// <summary>
         /// No Metadata Documentation available.
@@ -413,7 +415,7 @@ namespace EvolutionSimulator.DAL
                 {
                     OnMAP_IDChanging(value);
                     ReportPropertyChanging("MAP_ID");
-                    _MAP_ID = StructuralObject.SetValidValue(value, false);
+                    _MAP_ID = StructuralObject.SetValidValue(value, false, "MAP_ID");
                     ReportPropertyChanged("MAP_ID");
                     OnMAP_IDChanged();
                 }
@@ -438,7 +440,7 @@ namespace EvolutionSimulator.DAL
             {
                 OnROWSChanging(value);
                 ReportPropertyChanging("ROWS");
-                _ROWS = StructuralObject.SetValidValue(value);
+                _ROWS = StructuralObject.SetValidValue(value, "ROWS");
                 ReportPropertyChanged("ROWS");
                 OnROWSChanged();
             }
@@ -462,7 +464,7 @@ namespace EvolutionSimulator.DAL
             {
                 OnCOLUMNSChanging(value);
                 ReportPropertyChanging("COLUMNS");
-                _COLUMNS = StructuralObject.SetValidValue(value);
+                _COLUMNS = StructuralObject.SetValidValue(value, "COLUMNS");
                 ReportPropertyChanged("COLUMNS");
                 OnCOLUMNSChanged();
             }
@@ -486,7 +488,7 @@ namespace EvolutionSimulator.DAL
             {
                 OnMAPNAMEChanging(value);
                 ReportPropertyChanging("MAPNAME");
-                _MAPNAME = StructuralObject.SetValidValue(value, true);
+                _MAPNAME = StructuralObject.SetValidValue(value, true, "MAPNAME");
                 ReportPropertyChanged("MAPNAME");
                 OnMAPNAMEChanged();
             }
@@ -510,7 +512,7 @@ namespace EvolutionSimulator.DAL
             {
                 OnSAVEGAMEChanging(value);
                 ReportPropertyChanging("SAVEGAME");
-                _SAVEGAME = StructuralObject.SetValidValue(value, true);
+                _SAVEGAME = StructuralObject.SetValidValue(value, true, "SAVEGAME");
                 ReportPropertyChanged("SAVEGAME");
                 OnSAVEGAMEChanged();
             }
@@ -521,7 +523,6 @@ namespace EvolutionSimulator.DAL
 
         #endregion
 
-    
     }
     
     /// <summary>
@@ -547,7 +548,7 @@ namespace EvolutionSimulator.DAL
 
         #endregion
 
-        #region Primitive Properties
+        #region Simple Properties
     
         /// <summary>
         /// No Metadata Documentation available.
@@ -566,7 +567,7 @@ namespace EvolutionSimulator.DAL
                 {
                     OnaliveIDChanging(value);
                     ReportPropertyChanging("aliveID");
-                    _aliveID = StructuralObject.SetValidValue(value, false);
+                    _aliveID = StructuralObject.SetValidValue(value, false, "aliveID");
                     ReportPropertyChanged("aliveID");
                     OnaliveIDChanged();
                 }
@@ -591,7 +592,7 @@ namespace EvolutionSimulator.DAL
             {
                 OnPARENT_IDChanging(value);
                 ReportPropertyChanging("PARENT_ID");
-                _PARENT_ID = StructuralObject.SetValidValue(value, true);
+                _PARENT_ID = StructuralObject.SetValidValue(value, true, "PARENT_ID");
                 ReportPropertyChanged("PARENT_ID");
                 OnPARENT_IDChanged();
             }
@@ -615,7 +616,7 @@ namespace EvolutionSimulator.DAL
             {
                 OnCURRENTLIFECYCLEChanging(value);
                 ReportPropertyChanging("CURRENTLIFECYCLE");
-                _CURRENTLIFECYCLE = StructuralObject.SetValidValue(value);
+                _CURRENTLIFECYCLE = StructuralObject.SetValidValue(value, "CURRENTLIFECYCLE");
                 ReportPropertyChanged("CURRENTLIFECYCLE");
                 OnCURRENTLIFECYCLEChanged();
             }
@@ -639,7 +640,7 @@ namespace EvolutionSimulator.DAL
             {
                 OnGENERATIONChanging(value);
                 ReportPropertyChanging("GENERATION");
-                _GENERATION = StructuralObject.SetValidValue(value);
+                _GENERATION = StructuralObject.SetValidValue(value, "GENERATION");
                 ReportPropertyChanged("GENERATION");
                 OnGENERATIONChanged();
             }
@@ -663,7 +664,7 @@ namespace EvolutionSimulator.DAL
             {
                 OnSIZEChanging(value);
                 ReportPropertyChanging("SIZE");
-                _SIZE = StructuralObject.SetValidValue(value);
+                _SIZE = StructuralObject.SetValidValue(value, "SIZE");
                 ReportPropertyChanged("SIZE");
                 OnSIZEChanged();
             }
@@ -687,7 +688,7 @@ namespace EvolutionSimulator.DAL
             {
                 OnNEXTREPRODUCTIONCYCLEChanging(value);
                 ReportPropertyChanging("NEXTREPRODUCTIONCYCLE");
-                _NEXTREPRODUCTIONCYCLE = StructuralObject.SetValidValue(value);
+                _NEXTREPRODUCTIONCYCLE = StructuralObject.SetValidValue(value, "NEXTREPRODUCTIONCYCLE");
                 ReportPropertyChanged("NEXTREPRODUCTIONCYCLE");
                 OnNEXTREPRODUCTIONCYCLEChanged();
             }
@@ -711,7 +712,7 @@ namespace EvolutionSimulator.DAL
             {
                 OnWATERDEPOSITChanging(value);
                 ReportPropertyChanging("WATERDEPOSIT");
-                _WATERDEPOSIT = StructuralObject.SetValidValue(value);
+                _WATERDEPOSIT = StructuralObject.SetValidValue(value, "WATERDEPOSIT");
                 ReportPropertyChanged("WATERDEPOSIT");
                 OnWATERDEPOSITChanged();
             }
@@ -735,7 +736,7 @@ namespace EvolutionSimulator.DAL
             {
                 OnSTATUSChanging(value);
                 ReportPropertyChanging("STATUS");
-                _STATUS = StructuralObject.SetValidValue(value, true);
+                _STATUS = StructuralObject.SetValidValue(value, true, "STATUS");
                 ReportPropertyChanged("STATUS");
                 OnSTATUSChanged();
             }
@@ -746,7 +747,6 @@ namespace EvolutionSimulator.DAL
 
         #endregion
 
-    
     }
     
     /// <summary>
@@ -774,7 +774,7 @@ namespace EvolutionSimulator.DAL
 
         #endregion
 
-        #region Primitive Properties
+        #region Simple Properties
     
         /// <summary>
         /// No Metadata Documentation available.
@@ -793,7 +793,7 @@ namespace EvolutionSimulator.DAL
                 {
                     OnPARENT_IDChanging(value);
                     ReportPropertyChanging("PARENT_ID");
-                    _PARENT_ID = StructuralObject.SetValidValue(value, false);
+                    _PARENT_ID = StructuralObject.SetValidValue(value, false, "PARENT_ID");
                     ReportPropertyChanged("PARENT_ID");
                     OnPARENT_IDChanged();
                 }
@@ -820,7 +820,7 @@ namespace EvolutionSimulator.DAL
                 {
                     OnGENChanging(value);
                     ReportPropertyChanging("GEN");
-                    _GEN = StructuralObject.SetValidValue(value, false);
+                    _GEN = StructuralObject.SetValidValue(value, false, "GEN");
                     ReportPropertyChanged("GEN");
                     OnGENChanged();
                 }
@@ -845,7 +845,7 @@ namespace EvolutionSimulator.DAL
             {
                 OnVALORChanging(value);
                 ReportPropertyChanging("VALOR");
-                _VALOR = StructuralObject.SetValidValue(value);
+                _VALOR = StructuralObject.SetValidValue(value, "VALOR");
                 ReportPropertyChanged("VALOR");
                 OnVALORChanged();
             }
@@ -856,10 +856,8 @@ namespace EvolutionSimulator.DAL
 
         #endregion
 
-    
     }
 
     #endregion
 
-    
 }

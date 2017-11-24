@@ -8,6 +8,7 @@ using System.Text;
 using System.Windows.Forms;
 using EvolutionSimulator.UI;
 using System.IO;
+using EvolutionSimulator.Models;
 
 namespace EvolutionSimulator
 {
@@ -27,7 +28,7 @@ namespace EvolutionSimulator
         }
         public bool mustSaveGame { get; set; }
         public string SaveGameName { get; set; }
-        delegate void PaintCallback(Point point, string groundtype, int nplants);
+        delegate void PaintCallback( MapPoint  point, string groundtype, int nplants);
         delegate void RefreshCallback();
         static readonly object locker = new object();
 
@@ -65,7 +66,7 @@ namespace EvolutionSimulator
             }
         }
 
-        public void paint( Point point,string groundtype, int nplants)
+        public void paint( MapPoint point,string groundtype, int nplants)
         {
 
             if (this.InvokeRequired)

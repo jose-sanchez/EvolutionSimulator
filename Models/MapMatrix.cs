@@ -7,7 +7,7 @@ using System.Runtime.Serialization.Formatters.Soap;
 using EvolutionSimulator.DAL;
 using EvolutionSimulator.Services;
 
-namespace EvolutionSimulator
+namespace EvolutionSimulator.Models
 {
     [Serializable()]
     public class MapMatrix
@@ -97,7 +97,7 @@ namespace EvolutionSimulator
                 {
                     for (Index_y = 0; Index_y <= Limit_Y; Index_y++)
                     {
-                        Ground NewGround = new Ground(this, lines[Index_x].Substring(Index_y, 1), new Point(Index_x, Index_y));
+                        Ground NewGround = new Ground(this, lines[Index_x].Substring(Index_y, 1), new MapPoint(Index_x, Index_y));
 
                         _mapM.Add(NewGround);
                         screen.paint(NewGround.coordn, NewGround.groundtype, NewGround.ListPlant.Count);
