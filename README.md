@@ -19,7 +19,6 @@ Development Status
 Currently fixing bugs with Saving a map (It fails if the map has been already saved)
 Refactoring application to make it more readible and maintenable
 Future features
-- Reset button
 - Map designer 
 - Map selector
 
