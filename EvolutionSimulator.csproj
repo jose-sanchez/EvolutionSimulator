@@ -73,7 +73,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AbtractPlant.cs" />
-    <Compile Include="DAL\MapRepository.cs" />
+    <Compile Include="DAL\MapRepositoryCodeFirst.cs" />
     <Compile Include="DNA.cs" />
     <Compile Include="DNAPlant.cs" />
     <Compile Include="evolucion.Designer.cs">
@@ -92,7 +92,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <Compile Include="Ramdom.cs" />
-    <Compile Include="Save.cs" />
+    <Compile Include="MapRepositoyModelFirst.cs" />
     <Compile Include="UI\DNAProperties.cs">
       <SubType>Form</SubType>
     </Compile>

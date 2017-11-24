@@ -5,7 +5,7 @@ using System.Text;
 
 namespace EvolutionSimulator
 {
-    public static class Save
+    public static class MapRepositoyModelFirst
     {
         static private EvolutionEntities Context = new EvolutionEntities() ;
 
