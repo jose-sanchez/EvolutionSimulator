@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using EvolutionSimulator.UI;
+using EvolutionSimulator.DAL;
+
 namespace EvolutionSimulator
 {
     class Program

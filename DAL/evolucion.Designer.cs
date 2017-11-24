@@ -8,19 +8,16 @@
 //------------------------------------------------------------------------------
 
 using System;
-using System.ComponentModel;
 using System.Data.Entity.Core.EntityClient;
 using System.Data.Entity.Core.Objects;
 using System.Data.Entity.Core.Objects.DataClasses;
-using System.Linq;
 using System.Runtime.Serialization;
-using System.Xml.Serialization;
 
 [assembly: EdmSchemaAttribute()]
-namespace EvolutionSimulator
+namespace EvolutionSimulator.DAL
 {
     #region Contexts
-    
+
     /// <summary>
     /// No Metadata Documentation available.
     /// </summary>

@@ -76,7 +76,7 @@
     <Compile Include="DAL\MapRepositoryCodeFirst.cs" />
     <Compile Include="DNA.cs" />
     <Compile Include="DNAPlant.cs" />
-    <Compile Include="evolucion.Designer.cs">
+    <Compile Include="DAL\evolucion.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>evolucion.edmx</DependentUpon>
@@ -92,7 +92,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <Compile Include="Ramdom.cs" />
-    <Compile Include="MapRepositoyModelFirst.cs" />
+    <Compile Include="DAL\MapRepositoyModelFirst.cs" />
     <Compile Include="UI\DNAProperties.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -147,7 +147,7 @@
       <SubType>Designer</SubType>
     </None>
     <None Include="ClassDiagram1.cd" />
-    <EntityDeploy Include="evolucion.edmx">
+    <EntityDeploy Include="DAL\evolucion.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>evolucion.Designer.cs</LastGenOutput>
     </EntityDeploy>
