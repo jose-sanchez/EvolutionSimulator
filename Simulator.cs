@@ -24,13 +24,18 @@ namespace EvolutionSimulator
 
             this.gui = gui;
             Screen.EventTriggered += Screen_MouseDoubleClick;
-            string mapname = Path.Combine(Environment.CurrentDirectory, @"UI\Maps\map1.txt");           
+            InitGame();
+
+        }
+
+        private void InitGame()
+        {
+            string mapname = Path.Combine(Environment.CurrentDirectory, @"UI\Maps\map1.txt");
             mMatrix = new MapMatrix(13, 13, mapname, gui);
             mMatrix.addPlantToGround(10, 10, new DNAPlant("12345678123456781234567812345678"));
             mMatrix.Mapname = mapname;
-
-           
         }
+
         public Simulator(Screen gui,MapMatrix MapMatrix)
         {
             this.gui = gui;
@@ -48,16 +53,16 @@ namespace EvolutionSimulator
             aTimer.Interval = 500;
             aTimer.Enabled = true;
             GC.KeepAlive(aTimer);
-            //bool bucle = true;
-            //while (bucle == true) {
-            
-            //    mMatrix.Cycle();
-                
-            //}
+
         }
 
         private void Cycle(object source, ElapsedEventArgs e)
         {
+            if (gui.mustResetGame)
+            {
+                InitGame();
+                gui.mustResetGame = false;
+            }
             if(mMatrix.IsCiclyFinish && !gui.IsCycleStop) mMatrix.Cycle();
             if (!mMatrix.IsCiclyFinish) aTimer.Interval += 250;
             lock (Key)

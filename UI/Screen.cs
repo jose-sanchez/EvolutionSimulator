@@ -27,6 +27,7 @@ namespace EvolutionSimulator
             set { _IsCycleStop = value; }
         }
         public bool mustSaveGame { get; set; }
+        public bool mustResetGame { get; set; }
         public string SaveGameName { get; set; }
         delegate void PaintCallback( MapPoint  point, string groundtype, int nplants);
         delegate void RefreshCallback();
@@ -136,7 +137,10 @@ namespace EvolutionSimulator
             }
         }
 
-
+        private void btReset_Click_(object sender, EventArgs e)
+        {
+            mustResetGame = true;
+        }
     }
 
     public class DoubleClick_Arg : EventArgs
