@@ -14,10 +14,10 @@ namespace EvolutionSimulator
             //Get the generation from the DNA
             Generation = dna.Generation;
         }
-        public Plant(Ground parent,string ID):base(parent)
+        public Plant(Ground parent,string ID):base(parent, ID)
             
         {
-            Generation = dna.Generation;
+            
         }
 
         /// <summary>

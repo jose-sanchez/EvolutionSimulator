@@ -101,10 +101,11 @@ namespace EvolutionSimulator
             _dna = new DNAPlant(dna, aliveID);
             _parent = parent;
         }
-        public AbtractPlant(Ground parent)
+        public AbtractPlant(Ground parent, string ID)
             
         {
-            
+            _parent = parent;
+            aliveID = ID;
         }
        
         /// <summary>

@@ -74,7 +74,6 @@ namespace EvolutionSimulator
             screen = instance;
             _savegame = savegame;
             this.mapID = mapID;
-            RePaint();
         }
         public MapMatrix(int x, int y, string mapname, Screen instance)
         //Initialize the matrix reading the type of ground from the file mapname and creating the ground elements

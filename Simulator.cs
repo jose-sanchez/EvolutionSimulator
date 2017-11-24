@@ -29,9 +29,9 @@ namespace EvolutionSimulator
 
            
         }
-        public Simulator(MapMatrix MapMatrix)
+        public Simulator(Screen gui,MapMatrix MapMatrix)
         {
-
+            this.gui = gui;
             Screen.EventTriggered += Screen_MouseDoubleClick;
             mMatrix = MapMatrix;
         }

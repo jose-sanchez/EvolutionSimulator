@@ -19,8 +19,7 @@ namespace EvolutionSimulator
             {
                 MapMatrix map = Save.load_map(menu.LoadedGame,gui);
                 map.IsCiclyFinish = true;             
-                start = new Simulator(map);
-               
+                start = new Simulator(gui, map);          
             }
             else start = new Simulator(gui);
             System.Threading.Thread newThread1;

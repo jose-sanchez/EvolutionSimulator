@@ -78,7 +78,6 @@ namespace EvolutionSimulator
             this.btSave.TabIndex = 2;
             this.btSave.Text = "Save";
             this.btSave.UseVisualStyleBackColor = true;
-            this.btSave.Visible = false;
             this.btSave.Click += new System.EventHandler(this.btSave_Click);
             // 
             // label1

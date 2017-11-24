@@ -2,8 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Data.Objects;
-using System.Data.Objects.DataClasses;
+
 namespace EvolutionSimulator
 {
     public static class Save
@@ -141,6 +140,8 @@ namespace EvolutionSimulator
             MapMatrix.X = (int)map.COLUMNS;
             MapMatrix.Y = (int)map.ROWS;
             MapMatrix.IsCiclyFinish = true;
+            MapMatrix.LoadFromDataBase();
+            MapMatrix.RePaint();
             return MapMatrix;
         }
         public static bool ExistMap(String MapName)

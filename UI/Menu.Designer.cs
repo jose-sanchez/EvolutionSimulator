@@ -66,13 +66,12 @@
             // 
             // btLoad
             // 
-            this.btLoad.Location = new System.Drawing.Point(70, 239);
+            this.btLoad.Location = new System.Drawing.Point(49, 198);
             this.btLoad.Name = "btLoad";
-            this.btLoad.Size = new System.Drawing.Size(75, 23);
+            this.btLoad.Size = new System.Drawing.Size(201, 23);
             this.btLoad.TabIndex = 3;
             this.btLoad.Text = "Load Game";
             this.btLoad.UseVisualStyleBackColor = true;
-            this.btLoad.Visible = false;
             this.btLoad.Click += new System.EventHandler(this.btLoad_Click);
             // 
             // Menu
