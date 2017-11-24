@@ -16,7 +16,13 @@ Each plant receive a certain damage depending the kind of field where is growing
 Development Status
 --------------------
 
-Currently adding feature of saving and load the state of the simulation.
+Currently fixing bugs with Saving a map (It fails if the map has been already saved)
+Refactoring application to make it more readible and maintenable
+Future features
+- Reset button
+- Map designer 
+- Map selector
+
 
  
 Technology
@@ -30,7 +36,7 @@ Installation
 --------------------
 + 1) Clone the repository in your local machine
 
-+ 2) Open Sql Server Manager Studio an Attach to SQL server the DB contained into data.mdf, add read and write permission to your user.
++ 2) Open Sql Server Manager Studio an Attach to SQL server the DB contained into data.mdf, add read and write permission to your user. Or Run the scritps in folder DataBase starting by DataBaseCreation.sql(amend the db creation path) and then add the user permissions
 
 + 3) Open Visual Studio and Update the app.config with the connection string from your computer:  provider connection string=&quot;Data Source=DESKTOP-26M7VNU\SQLEXPRESS;Initial Catalog=DATA.MDF;integrated security=True;connect timeout=30;multipleactiveresultsets=True;App=EntityFramework&quot;"
 
