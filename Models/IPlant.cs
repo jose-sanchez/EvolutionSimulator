@@ -12,7 +12,7 @@ namespace EvolutionSimulator.Models
             get;
             set;
         }
-        DNA dna { get; }
+        //DNA dna { get; }
         int Generation { get; }
         int CurrentLifeCycle { get; }
 
