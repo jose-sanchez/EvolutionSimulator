@@ -90,6 +90,41 @@ namespace EvolutionSimulator.DAL
             }
             return List;
         }
+
+        internal static void Delete_Map(string mapID)
+        {
+            var map = Context.DMAP.FirstOrDefault(S => S.MAP_ID.Contains(mapID));
+            if (map != null)
+            {
+                foreach (var ground in Context.DGROUND.Where(src => src.PARENT == mapID))
+                {
+                    Delete_Ground(ground);
+                    
+                }
+                Context.DMAP.DeleteObject(map);
+            }
+        }
+
+        private static void Delete_Ground(DGROUND ground)
+        {
+            foreach (var plant in Context.DPLANT.Where(src => src.PARENT_ID == ground.GROUND_ID))
+            {
+                Delete_Plant(plant);
+
+            }
+            Context.DGROUND.DeleteObject(ground);
+        }
+
+        private static void Delete_Plant(DPLANT plant)
+        {
+            foreach (var dna in Context.DNA.Where(src => src.PARENT_ID == plant.aliveID))
+            {
+                Context.DNA.DeleteObject(dna);
+
+            }
+            Context.DPLANT.DeleteObject(plant);
+        }
+
         public static void Save_ground(Ground Ground)
         {
             DGROUND ground = new DGROUND();
@@ -145,9 +180,14 @@ namespace EvolutionSimulator.DAL
             MapMatrix.RePaint();
             return MapMatrix;
         }
-        public static bool ExistMap(String MapName)
+        public static bool ExistSavedMap(String MapName)
         {
             return (Context.DMAP.Where(S => S.SAVEGAME.Contains(MapName)).Count() > 0);
+        }
+
+        public static bool ExistSavedMapForThisMap(String MapName)
+        {
+            return (Context.DMAP.Where(S => S.MAPNAME.Contains(MapName)).Count() > 0);
         }
         public static List<string> ListGames()
         {

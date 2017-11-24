@@ -24,7 +24,7 @@ namespace EvolutionSimulator.UI
             
             if (textBox1.Text != "")
             {
-                if (!MapRepositoyModelFirst.ExistMap(textBox1.Text))
+                if (!MapRepositoyModelFirst.ExistSavedMap(textBox1.Text))
                 {
                     mustsave = true;
                     savename = textBox1.Text;

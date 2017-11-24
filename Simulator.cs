@@ -7,6 +7,7 @@ using EvolutionSimulator.UI;
 using System.Windows.Forms;
 using System.IO;
 using EvolutionSimulator.Models;
+using EvolutionSimulator.DAL;
 
 namespace EvolutionSimulator
 {
@@ -63,10 +64,25 @@ namespace EvolutionSimulator
             {
                 if (mMatrix.IsCiclyFinish && gui.IsCycleStop && gui.mustSaveGame)
                 {
+
+                    if (MapRepositoyModelFirst.ExistSavedMapForThisMap(mMatrix.Mapname))
+                    {
+                        DialogResult Result = MessageBox.Show("There map was saved previosly, the map will be overwritten", "Saving Game", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                        if (Result == DialogResult.No)
+                        {
+                            gui.mustSaveGame = false;
+                            return;
+                        }
+
+                        MapRepositoyModelFirst.Delete_Map(mMatrix.MapID);
+                    }
+
                     mMatrix.Savegame = gui.SaveGameName;
 
                     mMatrix.SavetoDataBase();
-                    MessageBox.Show("The game was saved correctly");
+
+
+                    MessageBox.Show("The game was saved correctly","Saving Game",MessageBoxButtons.OK, MessageBoxIcon.Information);
                     gui.mustSaveGame = false;
                 }
             }
