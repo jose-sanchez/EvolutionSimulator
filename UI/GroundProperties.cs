@@ -18,11 +18,33 @@ namespace EvolutionSimulator.UI
             InitializeComponent();
             _ground = gr;
             lbCoor.Text = gr.coordn._x + ", " + gr.coordn._y;
-            lbGroundType.Text = gr.groundtype;
+            lbGroundType.Text = GroundInformationToString(gr);
             lbNumberOfPlants.Text = gr.ListPlant.Count.ToString();
             dgPlantList.DataSource = gr.ListPlant;
-            dgPlantList.Columns["dna"].Visible = false;
+
             cbGeneration.DataSource = gr.ListPlant.Select(S=>S.Generation).Distinct().ToList();
+        }
+
+        private string GroundInformationToString(Ground gr)
+        {
+            string result = string.Empty;
+
+            switch (gr.groundtype)
+            {
+                case "W":
+                    result = String.Format("{0}     Damage:{1}     Water Absortion: {2}", "Cold", 10, 0.3);
+                    break;
+                case "D":
+                    result = String.Format("{0}     Damage:{1}     Water Absortion: {2}", "Desert", 30, 0.1);
+                    break;
+                case "S":
+                    result = String.Format("{0}     Damage:{1}     Water Absortion: {2}", "Dry", 15, 0.7);
+                    break;
+                case "P":
+                    result = String.Format("{0}     Damage:{1}     Water Absortion: {2}", "Tropical", 2, 1);
+                    break;
+            }
+            return result;
         }
 
         private void dgPlantList_MouseDoubleClick(object sender, MouseEventArgs e)

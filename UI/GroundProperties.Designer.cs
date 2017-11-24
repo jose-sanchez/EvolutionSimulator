@@ -36,6 +36,8 @@
             this.lbNumberOfPlants = new System.Windows.Forms.Label();
             this.dgPlantList = new System.Windows.Forms.DataGridView();
             this.cbGeneration = new System.Windows.Forms.ComboBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgPlantList)).BeginInit();
             this.SuspendLayout();
             // 
@@ -108,11 +110,29 @@
             this.cbGeneration.TabIndex = 8;
             this.cbGeneration.SelectedIndexChanged += new System.EventHandler(this.cbGeneration_SelectedIndexChanged);
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(246, 63);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(0, 13);
+            this.label4.TabIndex = 9;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(393, 63);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(0, 13);
+            this.label5.TabIndex = 10;
+            // 
             // GroundProperties
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(733, 305);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.cbGeneration);
             this.Controls.Add(this.dgPlantList);
             this.Controls.Add(this.lbNumberOfPlants);
@@ -139,5 +159,7 @@
         private System.Windows.Forms.Label lbNumberOfPlants;
         private System.Windows.Forms.DataGridView dgPlantList;
         private System.Windows.Forms.ComboBox cbGeneration;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
     }
 }
