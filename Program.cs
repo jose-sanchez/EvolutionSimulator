@@ -17,7 +17,7 @@ namespace EvolutionSimulator
             Screen gui = new Screen(mapStartXCoordinate, mapStartYCoordinate);
             if (menu.LoadedGame != "" && menu.LoadedGame != null)
             {
-                MapMatrix map = MapRepositoyModelFirst.load_map(menu.LoadedGame,gui);
+                MapMatrix map = MapRepositoyModelFirst.Load_map(menu.LoadedGame,gui);
                 map.IsCiclyFinish = true;             
                 start = new Simulator(gui, map);          
             }

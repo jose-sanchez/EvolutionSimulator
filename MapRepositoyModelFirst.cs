@@ -14,7 +14,7 @@ namespace EvolutionSimulator
         /// </summary>
         /// <param name="Gen">Contains the Gen to be saved</param>
         /// <param name="parent">ID of the Plant to be saved</param>
-        public static void save_gen(gen Gen, string parent) {
+        public static void Save_gen(gen Gen, string parent) {
             S_DNA dna = new S_DNA();
             dna.PARENT_ID=  parent;
             dna.GEN = Gen.name;
@@ -22,7 +22,7 @@ namespace EvolutionSimulator
             Context.DNA.AddObject(dna);
             Console.WriteLine(  Context.SaveChanges());         
         }
-        public static DNA load_dna( string parent,int generation)
+        public static DNA Load_dna( string parent,int generation)
         {
             S_DNA dna = new S_DNA();
             DNAPlant result = new DNAPlant(parent,generation);
@@ -35,7 +35,7 @@ namespace EvolutionSimulator
             }
             return result;
         }
-        public static void save_plant(Plant Plant)
+        public static void Save_plant(Plant Plant)
         {
             DPLANT plant = new DPLANT();
             plant.PARENT_ID = Plant.Parent;
@@ -49,7 +49,7 @@ namespace EvolutionSimulator
             Context.AddToDPLANT(plant);
             Console.WriteLine(Context.SaveChanges());
         }
-        public static List<IPlant> load_plants(Ground parent,kindstatus status)
+        public static List<IPlant> Load_plants(Ground parent,kindstatus status)
         {
             DPLANT dna = new DPLANT();
             List<IPlant> List = new List<IPlant>();
@@ -89,7 +89,7 @@ namespace EvolutionSimulator
             }
             return List;
         }
-        public static void save_ground(Ground Ground)
+        public static void Save_ground(Ground Ground)
         {
             DGROUND ground = new DGROUND();
             ground.GROUND_ID = Ground.GroundID;
@@ -103,7 +103,7 @@ namespace EvolutionSimulator
             Console.WriteLine(Context.SaveChanges());
 
         }
-        public static List<Ground> load_ground(MapMatrix parent)
+        public static List<Ground> Load_ground(MapMatrix parent)
         {
             var query = Context.DGROUND.Where(S => S.PARENT == parent.MapID);
             List<Ground> list = new List<Ground>();
@@ -121,7 +121,7 @@ namespace EvolutionSimulator
             return list; 
 
         }
-        public static void save_map(MapMatrix MapMatrix)
+        public static void Save_map(MapMatrix MapMatrix)
         {
             DMAP map = new DMAP();
             map.MAP_ID = MapMatrix.MapID;
@@ -132,7 +132,7 @@ namespace EvolutionSimulator
             Context.AddToDMAP(map);
             Console.WriteLine(Context.SaveChanges());         
         }
-        public static MapMatrix load_map(string Gamename,Screen gui)
+        public static MapMatrix Load_map(string Gamename,Screen gui)
         {          
             DMAP map = Context.DMAP.Single(S => S.SAVEGAME == Gamename);
             MapMatrix MapMatrix = new MapMatrix(Gamename, map.MAP_ID, gui);

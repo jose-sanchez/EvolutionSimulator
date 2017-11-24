@@ -153,7 +153,7 @@ namespace EvolutionSimulator
         public void SavetoDataBase()
         {
 
-            MapRepositoyModelFirst.save_map(this);
+            MapRepositoyModelFirst.Save_map(this);
             foreach (Ground ground in _mapM)
             {
 
@@ -163,7 +163,7 @@ namespace EvolutionSimulator
         public void LoadFromDataBase()
         {
 
-            _mapM= MapRepositoyModelFirst.load_ground(this);
+            _mapM= MapRepositoyModelFirst.Load_ground(this);
             foreach (Ground ground in _mapM)
             {
                

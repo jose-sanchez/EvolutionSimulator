@@ -66,7 +66,7 @@ namespace EvolutionSimulator
         public void saveDNA(){
           
             foreach (gen _gen in _dnachain){
-                MapRepositoyModelFirst.save_gen(_gen, Parent_ID);
+                MapRepositoyModelFirst.Save_gen(_gen, Parent_ID);
             }
         }
         

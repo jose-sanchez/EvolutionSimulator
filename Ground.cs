@@ -262,7 +262,7 @@ namespace EvolutionSimulator
             }
         public void SaveToDataBase()
         {
-            MapRepositoyModelFirst.save_ground(this);
+            MapRepositoyModelFirst.Save_ground(this);
             foreach (Plant plant in ListPlant)
             {
                 plant.SavetoDataBase();
@@ -275,8 +275,8 @@ namespace EvolutionSimulator
         public void LoadFromDataBase()
         {
 
-            _ListPlant = MapRepositoyModelFirst.load_plants(this, kindstatus.Growup);
-            _ListSeeds = MapRepositoyModelFirst.load_plants(this, kindstatus.Seed);
+            _ListPlant = MapRepositoyModelFirst.Load_plants(this, kindstatus.Growup);
+            _ListSeeds = MapRepositoyModelFirst.Load_plants(this, kindstatus.Seed);
             foreach (Plant plant in _ListPlant)
             {
 

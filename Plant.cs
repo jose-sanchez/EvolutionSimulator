@@ -34,12 +34,12 @@ namespace EvolutionSimulator
 
         public void SavetoDataBase()
         {
-            MapRepositoyModelFirst.save_plant(this);
+            MapRepositoyModelFirst.Save_plant(this);
             dna.saveDNA();
         }
         public void LoadFromDataBase()
         {
-            _dna = MapRepositoyModelFirst.load_dna(AliveID, Generation);
+            _dna = MapRepositoyModelFirst.Load_dna(AliveID, Generation);
         }
     }
 
