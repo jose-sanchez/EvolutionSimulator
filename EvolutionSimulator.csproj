@@ -91,7 +91,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <Compile Include="Ramdom.cs" />
+    <Compile Include="Services\Ramdom.cs" />
     <Compile Include="DAL\MapRepositoyModelFirst.cs" />
     <Compile Include="UI\DNAProperties.cs">
       <SubType>Form</SubType>
@@ -103,8 +103,8 @@
     <Compile Include="Ground.cs" />
     <Compile Include="MapMatrix.cs" />
     <Compile Include="Plant.cs" />
-    <Compile Include="BeingCreator.cs" />
-    <Compile Include="BeingFactory.cs" />
+    <Compile Include="Services\BeingCreator.cs" />
+    <Compile Include="Services\BeingFactory.cs" />
     <Compile Include="UI\GroundProperties.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -114,7 +114,7 @@
     <Compile Include="UI\Imap.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Reproduction.cs" />
+    <Compile Include="Services\Reproduction.cs" />
     <Compile Include="UI\LoadGame.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -140,7 +140,7 @@
       <DependentUpon>Screen.cs</DependentUpon>
     </Compile>
     <Compile Include="Simulator.cs" />
-    <Compile Include="Tiempo.cs" />
+    <Compile Include="Services\Clima.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config">
@@ -468,7 +468,9 @@
       <Install>true</Install>
     </BootstrapperPackage>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Models\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

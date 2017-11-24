@@ -5,6 +5,7 @@ using System.Text;
 
 using System.Runtime.Serialization.Formatters.Soap;
 using EvolutionSimulator.DAL;
+using EvolutionSimulator.Services;
 
 namespace EvolutionSimulator
 {
